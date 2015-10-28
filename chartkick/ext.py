@@ -80,7 +80,7 @@ class ChartExtension(Extension):
         kwargs.update(library=library)
 
         options.update(kwargs)
-        return CHART_HTML.format(data=data, options=json.dumps(kwargs),
+        return CHART_HTML.format(data=json.dumps(data), options=json.dumps(kwargs),
                                  **options)
 
     def _chart_class_name(self, tag_name):
